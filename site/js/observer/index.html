@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>数据监听和依赖收集 - yongqiang.shen</title>
+
+        <!-- <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet"> -->
+        <link href="../../css/page.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        
+
+<div id="header">
+    <a id="logo" href="../..">
+        <!-- <img src="../../img/logo.png"> -->
+        <span>yongqiang.shen</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form" role="form">
+    <input type="text" placeholder="Search..." id="mkdocs-search-query-input" class="st-default-search-input" autocomplete="off" autocorrect="off" autocapitalize="off">
+  </form>
+</li>
+
+    
+        
+            
+            <li><a href="../.." class="nav-link ">引言</a></li>
+            
+        
+    
+        
+        <li class="nav-dropdown-container">
+          <a class="nav-link">前端相关</a><span class="arrow"></span>
+          <ul class="nav-dropdown">
+            
+                
+    
+    <li><a href="./" class="nav-link">数据监听和依赖收集</a></li>
+    
+
+            
+          </ul>
+        </li>
+
+        
+    
+
+    </ul>
+</div>
+
+        
+            <div id="main" class="">
+                
+                    <div class="sidebar bs-sidebar">
+  <div class="list">
+    <ul class="nav menu-root">
+    
+        <li class="active">
+            <a href="#_1" class="sidebar-link">代码君</a>
+        </li>
+        <ul class="menu-sub">
+        
+        </ul>
+    
+        <li class="">
+            <a href="#_2" class="sidebar-link">图解君</a>
+        </li>
+        <ul class="menu-sub">
+        
+        </ul>
+    
+        <li class="">
+            <a href="#_3" class="sidebar-link">人话</a>
+        </li>
+        <ul class="menu-sub">
+        
+        </ul>
+    
+    </ul>
+  </div>
+</div>
+                    
+<div class="content guide with-sidebar">
+
+<h2 id="_1">代码君</h2>
+<pre><code>var target, content;
+class Dep {
+    constructor() {
+        this.watchs = []
+    }
+    addWatch() {
+        target&amp;&amp;this.watchs.push(target)
+    }
+    notify() {
+        this.watchs.forEach(w=&gt;w.update())
+    }
+}
+function observer(data) {
+    if (Object.prototype.toString.call(data) === '[object Object]') {
+        Object.keys(data).forEach(key=&gt; {
+            var dep = new Dep()
+            var val = data[key]
+            Object.defineProperty(data, key, {
+                enumerable: true,
+                configurable: true,
+                get: function () {
+                    dep.addWatch()
+                    return val
+                },
+                set: function (newVal) {
+                    if (val === newVal) {
+                        return
+                    }
+                    val = newVal
+                    dep.notify()
+                    observer(newVal)
+                }
+            })
+            observer(data[key])
+        })
+    }
+}
+class Watch {
+    constructor(exp, fn) {
+        this.exp = exp
+        this.update = fn
+        target = this
+        typeof exp === 'function' ? exp.call(content) : content[exp]
+    }
+}
+</code></pre>
+
+<pre><code>//test
+var testData = {
+    &quot;title&quot;: &quot;海报标题&quot;,
+    &quot;pics&quot;: [
+        {&quot;url&quot;: &quot;//p0.meituan.net/dprainbow/61daec840616895bc21a4a58cd68a38817000.png&quot;, &quot;desc&quot;: &quot;幼稚了&quot;},
+        {&quot;url&quot;: &quot;//p0.meituan.net/dprainbow/61daec840616895bc21a4a58cd68a38817000.png&quot;, &quot;desc&quot;: &quot;幼稚了&quot;}
+    ],
+    &quot;shop_info&quot;: {
+        &quot;shop_id&quot;: 9380423,
+        &quot;shop_name&quot;: &quot;巴黎婚纱国际旗舰店&quot;,
+        &quot;branch_name&quot;: &quot;松江店&quot;,
+        &quot;city_name&quot;: &quot;上海&quot;
+    },
+    &quot;desc&quot;: &quot;这是一段内容一段内容&quot;,
+    &quot;discount_info&quot;: &quot;又回来了&quot;,
+    &quot;allow_fabulous&quot;: false, &quot;$$id&quot;: &quot;a0ccdf50-ae2a-11e7-88bc-89a8406df769&quot;
+}
+content = testData
+observer(testData)
+new Watch('title',function(){
+    console.log(&quot;todo update page title!&quot;)
+})
+
+new Watch('shop_info.shop_name',function(){
+    console.log(&quot;todo update shop_info.shop_name!&quot;)
+})
+
+new Watch(function(){
+    return this.shop_info.shop_name + &quot;(&quot; + this.shop_info.branch_name + &quot;)&quot;
+},function(){
+    console.log(&quot;todo update desc to dom&quot; )
+})
+console.log(&quot;update title:&quot;)
+testData.title = &quot;第一次更新&quot;
+testData.title = &quot;第二次更新&quot;
+console.log(&quot;update shop_info：&quot;)
+testData.shop_info = {
+    &quot;shop_id&quot;: 1380423,
+    &quot;shop_name&quot;: &quot;巴黎婚纱国际旗舰店&quot;,
+    &quot;branch_name&quot;: &quot;昌平店&quot;,
+    &quot;city_name&quot;: &quot;北京&quot;
+}
+</code></pre>
+
+<h2 id="_2">图解君</h2>
+<p><img alt="类图" src="https://p0.meituan.net/dprainbow/a27d7ab55f66bab82e761ec64cf3dd8459074.png" /></p>
+<p><img alt="依赖收集流程图" src="https://p0.meituan.net/dprainbow/89672d67c82eed5a7804983f0c55c70380851.png" /></p>
+<h2 id="_3">人话</h2>
+<p>依赖收集关键点：</p>
+<pre><code>1.使用Object.defineProperty设置属性为可观测属性，即取值触发get 赋值触发set
+2.初始化Watch对象时，首先把当前对象设置为全局的target，执行观察者表达式，触发所依赖的属性的get函数(进行依赖收集)
+</code></pre>
+<p>依赖收集完成后，实现计算属性，数据-&gt;视图单项绑定，so easy!!!  </p>
+
+
+<div class="guide-links">
+    
+  <span>← <a href="../..">引言</a></span>
+    
+  
+</div>
+
+
+</div>
+                
+            </div>
+        
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true" style="display:none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form" onsubmit="return false">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
