@@ -150,7 +150,7 @@ testData.shop_info.discount_info.c
 2.es6 Reflect 具有语言内部方法 具有get-&gt;获取属性值  set-&gt;设置属性值
 </code></pre>
 <p>偶然得知vue3打算使用proxy实现数据观测模块，固试着写了下... </p>
-<p>作为数据观测模块，仅需要完成 target和key 关联 Dep对象，使得代理get函数中可以根据target和key 拿到对应的Dep对象 收集Watcher，
+<p>基于proxy实现依赖收集和通知，，仅需要完成 target和key 关联 Dep对象，使得代理get函数中可以根据target和key 拿到对应的Dep对象 收集Watcher，
 同理set函数获取Dep对象，通知所有的Watcher执行update</p>
 
 
