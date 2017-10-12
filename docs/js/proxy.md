@@ -54,7 +54,7 @@ testData.shop_info.discount_info.c
     
 偶然得知vue3打算使用proxy实现数据观测模块，固试着写了下... 
 
-作为数据观测模块，仅需要完成 target和key 关联 Dep对象，使得代理get函数中可以根据target和key 拿到对应的Dep对象 收集Watcher，
+基于proxy实现依赖收集和通知，，仅需要完成 target和key 关联 Dep对象，使得代理get函数中可以根据target和key 拿到对应的Dep对象 收集Watcher，
 同理set函数获取Dep对象，通知所有的Watcher执行update
 
  
