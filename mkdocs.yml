@@ -4,6 +4,7 @@ pages:
 - 引言: index.md
 - 前端相关:
   - 数据监听和依赖收集: js/observer.md
+  - es6 proxy实现可观测数据: js/observer.md
 
 
 

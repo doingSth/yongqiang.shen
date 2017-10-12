@@ -2,94 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a132131c-dd9d-4a80-96e7-23743edbc9c8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/img/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/img/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/img/search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/img/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/img/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/img/search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/js/observer.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/content.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/css/bootstrap-custom.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/css/font-awesome-4.0.3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/css/highlight.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/css/page.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/js/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/js/bootstrap-3.0.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/js/highlight.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/js/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/license/highlight.js/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/nav-sub.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/nav.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/scene.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/scene_aa.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/scene_bb.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/scene_cc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/scene_ma.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/scene_mb.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fedocs/toc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mkdocs.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/channel/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/css/bootstrap-custom.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/css/font-awesome-4.0.3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/css/highlight.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/css/page.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/development/bid/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/development/formcmp/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/development/register/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/development/viewcmp/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/js/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/js/bootstrap-3.0.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/js/highlight.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/js/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/license/highlight.js/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/log/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/mkdocs/js/lunr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/mkdocs/js/mustache.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/mkdocs/js/require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/mkdocs/js/search-results-template.mustache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/mkdocs/js/search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/mkdocs/js/text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/mkdocs/search_index.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/operatordoc/create/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/operatordoc/edit/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/operatordoc/form/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/operatordoc/power/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/operatordoc/publish/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/operatordoc/template/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/sitemap.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/third/ci/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/third/http/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/third/lego/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/third/package/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/third/pigeon/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/uno/channel/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/uno/ci/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/uno/cmp/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/uno/mobile/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/uno/pc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/uno/preview/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/uno/schema/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/js/proxy.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/js/observer.md" afterPath="$PROJECT_DIR$/docs/js/observer.md" />
     </list>
     <ignored path="yongqiang.shen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,14 +24,14 @@
     <favorites_list name="yongqiang.shen" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/index.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.26785713">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
@@ -126,7 +41,7 @@
       <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mkdocs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
               <folding />
             </state>
@@ -139,21 +54,34 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="observer.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="observer.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/js/observer.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7413793">
-              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state vertical-scroll-proportion="12.0">
+              <caret line="46" column="78" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="proxy.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/js/proxy.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5588235">
+              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -162,7 +90,7 @@
       <file leaf-file-name="docs.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -181,6 +109,7 @@
         <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/docs/js/observer.md" />
+        <option value="$PROJECT_DIR$/docs/js/proxy.md" />
       </list>
     </option>
   </component>
@@ -270,8 +199,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,6 +244,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -349,24 +283,33 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -379,13 +322,51 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/docs/index.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/js/observer.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -411,8 +392,19 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.26785713">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -422,8 +414,19 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7413793">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        <state vertical-scroll-proportion="12.0">
+          <caret line="46" column="78" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/js/proxy.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5588235">
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
           <folding />
         </state>
       </provider>

@@ -18,6 +18,7 @@ function observer(data) {
         Object.keys(data).forEach(key=> {
             var dep = new Dep()
             var val = data[key]
+            observer(data[key])
             Object.defineProperty(data, key, {
                 enumerable: true,
                 configurable: true,
@@ -34,7 +35,7 @@ function observer(data) {
                     observer(newVal)
                 }
             })
-            observer(data[key])
+
         })
     }
 }
@@ -43,7 +44,7 @@ class Watch {
         this.exp = exp
         this.update = fn
         target = this
-        typeof exp === 'function' ? exp.call(content) : content[exp]
+        typeof exp === 'function' ? exp.call(content) : eval(`content.${exp}`)
     }
 }
 ```
