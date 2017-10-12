@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>数据监听和依赖收集 - yongqiang.shen</title>
+	<title>es6 proxy实现可观测数据 - yongqiang.shen</title>
 
         <!-- <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -55,6 +55,12 @@
                 
     
     <li><a href="./" class="nav-link">数据监听和依赖收集</a></li>
+    
+
+            
+                
+    
+    <li><a href="./" class="nav-link">es6 proxy实现可观测数据</a></li>
     
 
             
@@ -119,6 +125,7 @@ function observer(data) {
         Object.keys(data).forEach(key=&gt; {
             var dep = new Dep()
             var val = data[key]
+            observer(data[key])
             Object.defineProperty(data, key, {
                 enumerable: true,
                 configurable: true,
@@ -135,7 +142,7 @@ function observer(data) {
                     observer(newVal)
                 }
             })
-            observer(data[key])
+
         })
     }
 }
@@ -144,7 +151,7 @@ class Watch {
         this.exp = exp
         this.update = fn
         target = this
-        typeof exp === 'function' ? exp.call(content) : content[exp]
+        typeof exp === 'function' ? exp.call(content) : eval(`content.${exp}`)
     }
 }
 </code></pre>
@@ -206,7 +213,7 @@ testData.shop_info = {
 
 <div class="guide-links">
     
-  <span>← <a href="../..">引言</a></span>
+  <span>← <a href="./">数据监听和依赖收集</a></span>
     
   
 </div>

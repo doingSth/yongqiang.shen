@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-11</lastmod>
+     <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,13 @@
         
     <url>
      <loc>/js/observer/</loc>
-     <lastmod>2017-10-11</lastmod>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/js/observer/</loc>
+     <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
