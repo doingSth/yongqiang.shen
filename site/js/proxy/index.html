@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>数据监听和依赖收集 - yongqiang.shen</title>
+	<title>es6 proxy实现可观测数据 - yongqiang.shen</title>
 
         <!-- <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -54,13 +54,13 @@
             
                 
     
-    <li><a href="./" class="nav-link">数据监听和依赖收集</a></li>
+    <li><a href="../observer/" class="nav-link">数据监听和依赖收集</a></li>
     
 
             
                 
     
-    <li><a href="../proxy/" class="nav-link">es6 proxy实现可观测数据</a></li>
+    <li><a href="./" class="nav-link">es6 proxy实现可观测数据</a></li>
     
 
             
@@ -88,14 +88,7 @@
         </ul>
     
         <li class="">
-            <a href="#_2" class="sidebar-link">图解君</a>
-        </li>
-        <ul class="menu-sub">
-        
-        </ul>
-    
-        <li class="">
-            <a href="#_3" class="sidebar-link">人话</a>
+            <a href="#_2" class="sidebar-link">人话</a>
         </li>
         <ul class="menu-sub">
         
@@ -108,115 +101,63 @@
 <div class="content guide with-sidebar">
 
 <h2 id="_1">代码君</h2>
-<pre><code>var target, content;
-class Dep {
-    constructor() {
-        this.watchs = []
-    }
-    addWatch() {
-        target&amp;&amp;this.watchs.push(target)
-    }
-    notify() {
-        this.watchs.forEach(w=&gt;w.update())
-    }
-}
-function observer(data) {
+<pre><code>function observer(data) {
     if (Object.prototype.toString.call(data) === '[object Object]') {
-        Object.keys(data).forEach(key=&gt; {
-            var dep = new Dep()
-            var val = data[key]
-            observer(data[key])
-            Object.defineProperty(data, key, {
-                enumerable: true,
-                configurable: true,
-                get: function () {
-                    dep.addWatch()
-                    return val
-                },
-                set: function (newVal) {
-                    if (val === newVal) {
-                        return
-                    }
-                    val = newVal
-                    dep.notify()
-                    observer(newVal)
-                }
-            })
-
+        Object.keys(data).forEach(key=&gt;{
+            data[key] = observer(data[key])
         })
+        var obj = new Proxy(data, {
+            get: function (target, key, receiver) {
+                console.log(`getting :`);
+                console.log(key);
+                return Reflect.get(target, key, receiver);
+            },
+            set: function (target, key, value, receiver) {
+                if (value === target[key]) {
+                    return
+                }
+                console.log(`setting :`)
+                console.log(key);
+                return Reflect.set(target, key,observer(value), receiver);
+            }
+        });
+        return obj
     }
-}
-class Watch {
-    constructor(exp, fn) {
-        this.exp = exp
-        this.update = fn
-        target = this
-        typeof exp === 'function' ? exp.call(content) : eval(`content.${exp}`)
-    }
+    return data
 }
 </code></pre>
 
 <pre><code>//test
 var testData = {
-    &quot;title&quot;: &quot;海报标题&quot;,
-    &quot;pics&quot;: [
-        {&quot;url&quot;: &quot;//p0.meituan.net/dprainbow/61daec840616895bc21a4a58cd68a38817000.png&quot;, &quot;desc&quot;: &quot;幼稚了&quot;},
-        {&quot;url&quot;: &quot;//p0.meituan.net/dprainbow/61daec840616895bc21a4a58cd68a38817000.png&quot;, &quot;desc&quot;: &quot;幼稚了&quot;}
-    ],
     &quot;shop_info&quot;: {
-        &quot;shop_id&quot;: 9380423,
-        &quot;shop_name&quot;: &quot;巴黎婚纱国际旗舰店&quot;,
-        &quot;branch_name&quot;: &quot;松江店&quot;,
-        &quot;city_name&quot;: &quot;上海&quot;
+        &quot;branch_name&quot;: &quot;松江店&quot;
     },
-    &quot;desc&quot;: &quot;这是一段内容一段内容&quot;,
-    &quot;discount_info&quot;: &quot;又回来了&quot;,
-    &quot;allow_fabulous&quot;: false, &quot;$$id&quot;: &quot;a0ccdf50-ae2a-11e7-88bc-89a8406df769&quot;
+    &quot;discount_info&quot;: &quot;又回来了&quot;
 }
-content = testData
-observer(testData)
-new Watch('title',function(){
-    console.log(&quot;todo update page title!&quot;)
-})
 
-new Watch('shop_info.shop_name',function(){
-    console.log(&quot;todo update shop_info.shop_name!&quot;)
-})
-
-new Watch(function(){
-    return this.shop_info.shop_name + &quot;(&quot; + this.shop_info.branch_name + &quot;)&quot;
-},function(){
-    console.log(&quot;todo update desc to dom&quot; )
-})
-console.log(&quot;update title:&quot;)
-testData.title = &quot;第一次更新&quot;
-testData.title = &quot;第二次更新&quot;
-console.log(&quot;update shop_info：&quot;)
-testData.shop_info = {
-    &quot;shop_id&quot;: 1380423,
-    &quot;shop_name&quot;: &quot;巴黎婚纱国际旗舰店&quot;,
-    &quot;branch_name&quot;: &quot;昌平店&quot;,
-    &quot;city_name&quot;: &quot;北京&quot;
-}
+testData=observer(testData)
+console.log(&quot;update testData.shop_info.branch_name:&quot;)
+testData.shop_info.branch_name =  &quot;昌平店&quot;
+console.log(&quot;update testData.shop_info.discount_info:&quot;)
+testData.shop_info.discount_info = {c:0.9}
+console.log(&quot;get testData.shop_info.discount_info.c:&quot;)
+testData.shop_info.discount_info.c
 </code></pre>
 
-<h2 id="_2">图解君</h2>
-<p><img alt="类图" src="https://p0.meituan.net/dprainbow/a27d7ab55f66bab82e761ec64cf3dd8459074.png" /></p>
-<p><img alt="依赖收集流程图" src="https://p0.meituan.net/dprainbow/89672d67c82eed5a7804983f0c55c70380851.png" /></p>
-<h2 id="_3">人话</h2>
-<p>依赖收集关键点：</p>
-<pre><code>1.使用Object.defineProperty设置属性为可观测属性，即取值触发get 赋值触发set
-2.初始化Watch对象时，首先把当前对象设置为全局的target，执行观察者表达式，触发所依赖的属性的get函数(进行依赖收集)
+<h2 id="_2">人话</h2>
+<p>关键点：</p>
+<pre><code>1.es6 Proxy 可以对整个对象进行拦截的特性 实现取值触发get  赋值触发set 
+2.es6 Reflect 具有语言内部方法 具有get-&gt;获取属性值  set-&gt;设置属性值
 </code></pre>
-<p>依赖收集完成后，实现计算属性，数据-&gt;视图单项绑定，so easy!!!  </p>
+<p>偶然得知vue3打算使用proxy实现数据观测模块，固试着写了下... </p>
+<p>作为数据观测模块，仅需要完成 target和key 关联 Dep对象，使得代理get函数中可以根据target和key 拿到对应的Dep对象 收集Watcher，
+同理set函数获取Dep对象，通知所有的Watcher执行update</p>
 
 
 <div class="guide-links">
     
-  <span>← <a href="../..">引言</a></span>
+  <span>← <a href="../observer/">数据监听和依赖收集</a></span>
     
-  
-  <span style="float:right"><a href="../proxy/">es6 proxy实现可观测数据</a> →</span>
   
 </div>
 
