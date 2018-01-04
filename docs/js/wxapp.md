@@ -40,7 +40,7 @@
 
 ###代码编译
 
-wxapp page [wxapp](https://doingsth.github.io/yongqiang.shen/img/wxapp.png))
+wxapp page ![wxapp](https://doingsth.github.io/yongqiang.shen/img/wxapp.png))
 
 Text.wxml
 
@@ -66,7 +66,7 @@ Text.js
 Page({})
 ```
 
-react-native [rn](https://doingsth.github.io/yongqiang.shen/img/react-native.png))
+react-native ![rn](https://doingsth.github.io/yongqiang.shen/img/react-native.png))
 
 ```
 import React, { Component } from 'react';
@@ -178,7 +178,7 @@ transform(path.join(__dirname,'../wxapp/Text'))
 
 邮箱：zzz596704878@163.com
 
-微信：[wx](https://doingsth.github.io/yongqiang.shen/img/wx.png)
+微信：![wx](https://doingsth.github.io/yongqiang.shen/img/wx.png)
 
 沈六（沈永强）/蚂蚁金服/高级前端开发工程师/杭州
 
