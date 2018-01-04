@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2018-01-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,19 @@
         
     <url>
      <loc>/js/observer/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2018-01-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/js/proxy/</loc>
-     <lastmod>2017-10-12</lastmod>
+     <lastmod>2018-01-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/js/wxapp/</loc>
+     <lastmod>2018-01-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
